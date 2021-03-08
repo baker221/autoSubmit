@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ master ]
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 2 * * *'
 
 jobs:
 
@@ -32,4 +32,4 @@ jobs:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
         FT_SCKEY: ${{ secrets.FT_SCKEY }}
-      run: ./autosubmit
+      run: ./autosubmit -reason "吃饭" -track "北大西门-畅春园-北大西门"
